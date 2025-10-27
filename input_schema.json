@@ -6,7 +6,7 @@
     "csvUrl": {
       "title": "CSV URL (https://...)",
       "type": "string",
-      "editor": "text",
+      "editor": "textfield",
       "description": "Public URL to the CSV. Leave blank if using Key-Value Store."
     },
     "useKvInput": {
@@ -19,7 +19,7 @@
     "urlCol": {
       "title": "URL Column Name",
       "type": "string",
-      "editor": "text",
+      "editor": "textfield",
       "default": "Staff Page URL",
       "description": "The exact column name in your CSV that contains URLs to crawl."
     },
