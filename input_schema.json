@@ -1,0 +1,44 @@
+{
+  "title": "CSV → CSV Email Extractor (URL or KV store)",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "csvUrl": {
+      "title": "CSV URL (https://...)",
+      "type": "string",
+      "format": "uri",
+      "description": "Public URL to the CSV. Or leave blank and toggle `useKvInput` to load INPUT.csv from the Key-Value Store."
+    },
+    "useKvInput": {
+      "title": "Use Key-Value Store 'INPUT.csv'",
+      "type": "boolean",
+      "default": false
+    },
+    "urlCol": {
+      "title": "URL Column Name",
+      "type": "string",
+      "default": "Staff Page URL"
+    },
+    "waitMs": {
+      "title": "Page Load Timeout (ms)",
+      "type": "integer",
+      "default": 45000
+    },
+    "headful": {
+      "title": "Run browser visibly (debug)",
+      "type": "boolean",
+      "default": false
+    },
+    "limit": {
+      "title": "Max Rows to Process (0 = all)",
+      "type": "integer",
+      "default": 0
+    },
+    "force": {
+      "title": "Overwrite existing 'Found Emails' values",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": []
+}
