@@ -7,46 +7,51 @@
       "title": "CSV URL (https://...)",
       "type": "string",
       "editor": "textfield",
-      "description": "Public URL to the CSV. Leave blank if using Key-Value Store."
+      "description": "If provided, the actor will load the CSV from this public URL."
     },
     "useKvInput": {
       "title": "Use Key-Value Store 'INPUT.csv'",
       "type": "boolean",
       "editor": "checkbox",
       "default": false,
-      "description": "Enable if you upload a CSV named INPUT.csv to the actor run's Key-Value Store."
+      "description": "Enable this to load a file named INPUT.csv from the actor run's Key-Value Store instead of using a URL."
     },
     "urlCol": {
       "title": "URL Column Name",
       "type": "string",
       "editor": "textfield",
       "default": "Staff Page URL",
-      "description": "The exact column name in your CSV that contains URLs to crawl."
+      "description": "Column name in the CSV that contains the URLs to visit for scraping."
     },
     "waitMs": {
       "title": "Page Load Timeout (ms)",
       "type": "integer",
       "editor": "number",
-      "default": 45000
+      "default": 45000,
+      "description": "Maximum time in milliseconds to wait for a page to load before timing out."
     },
     "headful": {
       "title": "Run in visible browser mode (debug)",
       "type": "boolean",
       "editor": "checkbox",
-      "default": false
+      "default": false,
+      "description": "If enabled, runs the browser in visible (non-headless) mode to observe behavior."
     },
     "limit": {
       "title": "Max Rows to Process (0 = all)",
       "type": "integer",
       "editor": "number",
-      "default": 0
+      "default": 0,
+      "description": "Limits how many rows will be processed during the run. Set to 0 to process all rows."
     },
     "force": {
       "title": "Overwrite existing 'Found Emails' values",
       "type": "boolean",
       "editor": "checkbox",
-      "default": false
+      "default": false,
+      "description": "If enabled, the actor will re-process rows that already have email data filled in."
     }
   },
   "required": []
 }
+
