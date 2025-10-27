@@ -6,38 +6,42 @@
     "csvUrl": {
       "title": "CSV URL (https://...)",
       "type": "string",
-      "format": "uri",
-      "description": "Public URL to the CSV. Or leave blank and toggle `useKvInput` to load INPUT.csv from the Key-Value Store."
+      "description": "Public URL to the CSV. Leave blank if using Key-Value Store."
     },
     "useKvInput": {
       "title": "Use Key-Value Store 'INPUT.csv'",
       "type": "boolean",
-      "default": false
+      "default": false,
+      "description": "Enable this if you upload a file named INPUT.csv into the actor run's Key-Value Store."
     },
     "urlCol": {
       "title": "URL Column Name",
       "type": "string",
-      "default": "Staff Page URL"
+      "default": "Staff Page URL",
+      "description": "The exact column name in your CSV that contains the URLs to be scraped."
     },
     "waitMs": {
       "title": "Page Load Timeout (ms)",
       "type": "integer",
-      "default": 45000
+      "default": 45000,
+      "description": "Time to wait for page load before timing out."
     },
     "headful": {
-      "title": "Run browser visibly (debug)",
+      "title": "Run in visible browser mode (debug)",
       "type": "boolean",
       "default": false
     },
     "limit": {
       "title": "Max Rows to Process (0 = all)",
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "description": "Set to limit the number of CSV rows to process. Leaves rest untouched."
     },
     "force": {
       "title": "Overwrite existing 'Found Emails' values",
       "type": "boolean",
-      "default": false
+      "default": false,
+      "description": "Enable to re-scrape rows that already have values."
     }
   },
   "required": []
